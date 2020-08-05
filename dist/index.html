@@ -5,6 +5,7 @@
   <title>2048</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link href="style/modal.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
   <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
@@ -39,6 +40,7 @@
 </script>
 </head>
 <body>
+  <div id="yandex_rtb_R-A-609553-2"></div>
   <div class="container">
     <div class="heading">
       <h1 class="title">2048</h1>
@@ -51,6 +53,7 @@
     <div class="above-game">
       <p class="game-intro">Присоединяйся к номерам и доберись до <strong>2048 плитки!</strong></p>
       <a class="restart-button">Новая игра</a>
+      <a class="how-to-play" id="myBtn">КАК ИГРАТЬ</a>
     </div>
 
     <div class="game-container">
@@ -92,15 +95,59 @@
       <div class="tile-container">
 
       </div>
-    </div>
-
-    <p class="game-explanation">
-      <strong class="important">КАК ИГРАТЬ:</strong> Используйте клавиши со стрелками для перемещения плитки. Когда две плитки с одинаковым номером соприкасаются, они объединяются в одну!
-    </p>
-    <hr>
-    <div id="yandex_rtb_R-A-609553-2"></div>
+    </div>    
 
   </div>
+
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>КАК ИГРАТЬ</h2>
+    </div>
+    <div class="modal-body">
+      <p class="game-explanation">
+        Используйте клавиши со стрелками для перемещения плитки. Когда две плитки с одинаковым номером соприкасаются, они объединяются в одну!
+      </p>
+    </div>
+<!--     <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div> -->
+  </div>
+
+</div>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
 
   <script src="js/bind_polyfill.js"></script>
   <script src="js/classlist_polyfill.js"></script>
