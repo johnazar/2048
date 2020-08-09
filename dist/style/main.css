@@ -120,8 +120,10 @@ hr {
   margin: 5% auto;
   /* center */
   
-  bottom: 20px;
-  
+}
+
+#my-ad-block{
+  margin: 10px auto;
 }
 
 @-webkit-keyframes fade-in {
@@ -566,11 +568,7 @@ hr {
   .container {
     width: 280px;
     margin: 0 auto;
-    /* center */
-    position: absolute;
-    left: 120px;
-    bottom: 20px;
- }
+   }
 
   .score-container, .best-container {
     margin-top: 0;
