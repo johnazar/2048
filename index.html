@@ -22,52 +22,15 @@
 
 
 
-<script>
-  YaGames.init({
-      adv: {
-          onAdvClose: wasShown => {
-              console.info('adv closed!');
-          }
-      }
-  })
-  .then(ysdk => {
-      ysdk.adv.showFullscreenAdv();
-
-      const buttonElem = document.querySelector('#restart-button');
-
-      let commonCounter = 0;
-      buttonElem.addEventListener('click', () => {
-          let counter = 0;
-
-          function getCallback(callbackName) {
-              return () => {
-                  counter += 1;
-                  commonCounter += 1;
-
-                  console.log(`showFullscreenAdv; callback ${callbackName}; ${counter} call`);
-              }
-          }
-
-          ysdk.adv.showFullscreenAdv({
-              callbacks: {
-                  onClose: getCallback('onClose'),
-                  onOpen: getCallback('onOpen'),
-                  onError: getCallback('onError'),
-                  onOffline: getCallback('onOffline')
-              }
-          });
-      });
-  });
-</script>
-<!-- Yandex.RTB R-A-609553-2 -->
+<!-- Yandex.RTB R-A-609553-3 -->
 
 <script type="text/javascript">
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
         w[n].push(function() {
             Ya.Context.AdvManager.render({
-                blockId: "R-A-609553-2",
-                renderTo: "yandex_rtb_R-A-609553-2",
+                blockId: "R-A-609553-3",
+                renderTo: "yandex_rtb_R-A-609553-3",
                 async: true
             });
         });
@@ -85,7 +48,7 @@
   
   <div class="container">
     
-     <div id="my-ad-block"><div id="yandex_rtb_R-A-609553-2"></div></div>
+     <div id="my-ad-block"><div id="yandex_rtb_R-A-609553-3"></div></div>
     <div class="heading">
       <h1 class="title">2048</h1>
       <div class="scores-container">
